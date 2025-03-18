@@ -1,21 +1,3 @@
-.Header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f8f9fa;
-}
-.Footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f8f9fa;
-  margin-top: 20px;
-}
-.Content {
-  padding: 20px;
-  text-align: center;
-}
 .navbar {
-  flex-grow: 1;
-  justify-content: flex-end;
+background-image: linear-gradient(to right, #ff5f6d, #ffc371);
 }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CONTACTANOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/contactanos.css">
     <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css">
@@ -13,20 +14,30 @@
 </head>
 <body>
 <div id="header" class="sticky-top"></div>
-    <div class="Content">
-        <p>Seccion de Contacto</p>
-    </div>
-    <div class="form">
-        <form id="contactForm">
-            <label id="nameBoxLabel" for="nameBox">Nombre:</label>
-            <input type="text" id="nameBox" name="nameBox" required>
-            <label id="phoneBoxLabel" for="phoneBox">Telefono:</label>
-            <input id="phoneBox" name="phone" required>
-            <label id="messageBoxLabel" for="messageBox">Mensaje:</label>
-            <textarea id="messageBox" name="message" required></textarea>
-            <input id="submitButton" type="submit" value="Enviar">
-        </form>
-    </div>
+
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3">
+                    <input id="nameBox" name="nameBox" class="form-control" placeholder="NOMBRE" required>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <input id="phoneBox" name="phone" class="form-control" placeholder="TELEFONO" required>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 text-center">
+                    <label id="messageBoxLabel" for="messageBox" class="form-label">Mensaje:</label>
+                    <textarea id="messageBox" name="message" class="form-control" required></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-12 col-md-6 text-center">
+                    <input id="submitButton" type="submit" value="Enviar" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </form>
 <div id="footer"></div>
 <script> fetch('header.html')
     .then(response => response.text()

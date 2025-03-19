@@ -12,24 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light sticky-top">
-        <a class="navbar-brand" href="home.html">
-            <img src="Resources/LogoLuzam.png" alt="Logo" width="150" height="60">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbarNav collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto text-center">
-                <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
-                <li class="nav-item"><a class="nav-link" href="WebApp/nosotros.html">ACERCA DE NOSOTROS</a></li>
-                <li class="nav-item"><a class="nav-link" href="WebApp/productos.html">PRODUCTOS</a></li>
-                <li class="nav-item"><a class="nav-link" href="WebApp/contactanos.html">CONTACTANOS</a></li>
-            </ul>
-            <button id="loginbtn" class="btn btn-primary btn-sm"> Ingresar </button>
-        </div>
-    </nav>
+<div id="header" class="sticky-top"></div>
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -50,35 +33,17 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
-    <div class="container-fluid">
-        <footer class="bg-dark text-center text-white">
-            <div class="container">
-                <section class="mb-4">
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-google"></i></a>
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-github"></i></a>
-                </section>
-            </div>
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2025 Copyright:
-                <a class="text-white">LUZAM S.R.L.</a>
-            </div>
-        </footer>
-
+        <div id="footer"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+<script> fetch('header.html')
+.then(response => response.text()
+.then(data=>{ document.getElementById('header').innerHTML = data}))</script>
+<script> fetch('footer.html')
+    .then(response => response.text()
+        .then(data=>{ document.getElementById('footer').innerHTML = data}))</script>
 </body>
 
 </html>

@@ -1,0 +1,10 @@
+.navbar {
+  background-color: #d12424;
+}
+.navitem {
+  font-size: 20px;
+}
+#loginbtn {
+  background-color: #1c70b8;
+  border-color: #000000;
+}

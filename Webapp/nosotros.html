@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ACERCA DE NOSOTROS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
     <link rel="stylesheet" href="../Styles/nosotros.css">
     <link rel="stylesheet" href="../Styles/header.css">
     <link rel="stylesheet" href="../Styles/footer.css">
@@ -14,9 +15,17 @@
 
 <body>
 <div id="header" class="sticky-top"></div>
-    <div class="Historia">
-        <h2>Historia</h2>
-        <p>Historia: LUZAM, una empresa familiar nace el 2 de enero de 1984, siendo en principio una empresa unipersonal
+<div class="Historia container">
+    <div class="d-flex justify-content-center">
+        <h1>Historia</h1>
+    </div>
+    <div class="historia-content row container">
+        <div class="col-lg-6 col-md-11 col-sm-12">
+        <p>Descubre como LUZAM S.R.L. aporta al desarrollo del pais, siendo parte fundamental para el apoyo al agro y la industria tarijeña, expandiendose hacian el resto del pais.</p>
+            <img src="../Resources/Icono.png">
+        </div>
+        <div class="col-lg-6 col-md-11 col-sm-12">
+        <p>LUZAM, una empresa familiar nace el 2 de enero de 1984, siendo en principio una empresa unipersonal
             dedicada a la comercialización de repuestos Volkswagen, bombas de agua y todos los requerimientos de la
             Agroindustria.
             En 1998, da un primer paso para convertirse en una importadora, ya que se consiguieron representaciones para
@@ -33,17 +42,26 @@
             En el año 2018 LUZAM S.R.L. con 35 años que avalan nuestra experiencia inaugura sus nuevas oficinas en la
             ciudad de Tarija constituyéndose en una de las más importantes proveedoras de soluciones industriales en el
             país.</p>
+        </div>
     </div>
-    <div class="Mision">
-        <h2>Mision</h2>
+    <div class="Mision container">
+        <div class="d-flex justify-content-center">
+            <h2>Nuestra Mision</h2>
+        </div>
+        <div>
         <p>Somos generadores de soluciones industriales forjando confianza a través de un equipo comprometido, creciendo
             juntos e impulsando el desarrollo del país. </p>
+        </div>
     </div>
-    <div class="Vision">
-        <h2>Vision</h2>
+    <div class="Vision container">
+        <div class="d-flex justify-content-center">
+        <h2>Nuestra Vision</h2>
+        </div>
+        <div>
         <p>Ser los mejores mediante un equipo sólido y protagonista en la oferta de nuestros productos y servicios a
             nivel nacional.</p>
-    </div>
+        <img src="../Resources/LuzamTeam.png">    
+        </div>
     <div id="footer"></div>
     <script> fetch('header.html')
         .then(response => response.text()
@@ -51,5 +69,8 @@
     <script> fetch('footer.html')
         .then(response => response.text()
             .then(data=>{ document.getElementById('footer').innerHTML = data}))</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </html>

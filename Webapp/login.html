@@ -15,13 +15,15 @@
 <body>
     <h1>LUZAM WEB APPLICATION</h1>
     <div id="header" class="sticky-top"></div>
-    <div class="Login">
-        <form id="loginForm">
-            <label id="usernameLabel" for="username">Usuario:</label>
-            <input id="usernameBox" type="text" id="username" name="username" required>
-            <label id="passwordLabel" for="password">Contraseña:</label>
-            <input id="passwordBox" type="password" id="password" name="password" required>
-            <input id="submitButton" type="submit" value="Ingresar" href="WebApp/home.html">
+    <div class="container">
+        <form id="loginForm" class="mb-3">
+            <input class="form-control" type="text" id="username" placeholder="Usuario" required>
+            <input class="form-control" type="password" id="password" placeholder="Contraseña" required>
+            <div class="row justify-content-center mt-3">
+                <div class="col-12 col-md-6 text-center">
+                    <button id="submitButton" type="submit" value="Ingresar" href="WebApp/home.html">Ingresar</button>
+                </div>
+            </div>
         </form>
     </div>
     <div id="footer"></div>
@@ -31,6 +33,9 @@
     <script> fetch('footer.html')
         .then(response => response.text()
             .then(data=>{ document.getElementById('footer').innerHTML = data}))</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

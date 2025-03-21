@@ -1,6 +1,8 @@
 .Content {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .content > div {
     margin: 10px;
@@ -34,4 +36,9 @@ div > h2 {
 }
 h1 {
     text-align: center;
+}
+@media (max-width: 800px) {
+    .Content {
+        flex-direction: column;
+    }
 }

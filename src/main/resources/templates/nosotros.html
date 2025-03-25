@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="../static/css/nosotros.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+</head>
+
+<body>
+<div id="header" class="sticky-top"></div>
+<div class="Historia container">
+    <div class="d-flex justify-content-center">
+        <h1>Historia</h1>
+    </div>
+    <div class="historia-content row container">
+        <div class="col-lg-6 col-md-11 col-sm-12">
+            <p>Descubre como LUZAM S.R.L. aporta al desarrollo del pais, siendo parte fundamental para el apoyo al agro y la industria tarijeña, expandiendose hacian el resto del pais.</p>
+            <img src="../static/images/common/Icono.png">
+        </div>
+        <div class="col-lg-6 col-md-11 col-sm-12">
+            <p>LUZAM, una empresa familiar nace el 2 de enero de 1984, siendo en principio una empresa unipersonal
+                dedicada a la comercialización de repuestos Volkswagen, bombas de agua y todos los requerimientos de la
+                Agroindustria.
+                En 1998, da un primer paso para convertirse en una importadora, ya que se consiguieron representaciones para
+                la distribución de fábricas brasileñas, como: BAMBOZZI, SCHULZ, TRAPP, SOMAR.
+                Con el tiempo, LUZAM fue creciendo en cuanto a la cantidad de proveedores internacionales a los que
+                representaba, y a la variedad de productos que ofrecía para satisfacer de una mejor manera a toda su
+                clientela, además de ampliar los servicios adicionales, como son: Taller propio, servicio post-venta,
+                perforación de pozos profundos, instalaciones, mantenimiento y reparación de equipos a través de un grupo de
+                ingenieros y técnicos, logrando así fidelizar a sus clientes actuales y captar clientes nuevos, es de esta
+                forma que en el Año 2006 LUZAM se convierte en LUZAM S.R.L, inaugurando este año su primera sucursal en la
+                ciudad de Sucre, en el departamento de Chuquisaca.
+                En Agosto del año 2009, LUZAM S.R.L. inaugura su segunda sucursal en la ciudad de Bermejo, en el
+                departamento de Tarija, finalmente en el año 2010 se inaugura una nueva sucursal en la ciudad de La Paz.
+                En el año 2018 LUZAM S.R.L. con 35 años que avalan nuestra experiencia inaugura sus nuevas oficinas en la
+                ciudad de Tarija constituyéndose en una de las más importantes proveedoras de soluciones industriales en el
+                país.</p>
+        </div>
+    </div>
+    <div class="Mision container">
+        <div class="d-flex justify-content-center">
+            <h2>Nuestra Mision</h2>
+        </div>
+        <div>
+            <p>Somos generadores de soluciones industriales forjando confianza a través de un equipo comprometido, creciendo
+                juntos e impulsando el desarrollo del país. </p>
+        </div>
+    </div>
+    <div class="Vision container">
+        <div class="d-flex justify-content-center">
+            <h2>Nuestra Vision</h2>
+        </div>
+        <div>
+            <p>Ser los mejores mediante un equipo sólido y protagonista en la oferta de nuestros productos y servicios a
+                nivel nacional.</p>
+            <img src="../static/images/common/LuzamTeam.png">
+        </div>
+        </div>
+</div>
+<div id="footer"></div>
+    <script> fetch('header.html')
+            .then(response => response.text()
+                .then(data=>{ document.getElementById('header').innerHTML = data}))</script>
+        <script> fetch('footer.html')
+            .then(response => response.text()
+                .then(data=>{ document.getElementById('footer').innerHTML = data}))</script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+</body>
+</html>

@@ -10,7 +10,7 @@ function loadCategories(){
     }).then(categories=> {
         const container = document.getElementById('categoriesContainer');
         container.innerHTML='';
-        if (categories.length == 0) {
+        if (categories.length === 0) {
             container.innerHTML = '<h2>No hay categorias</h2>';
             return;
         }

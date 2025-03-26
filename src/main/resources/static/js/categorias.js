@@ -28,7 +28,7 @@ function renderCategories(categories) {
                     <h2>${category.nombre}</h2>
                 </div>
                 <div>
-                    <img src="http://localhost:63342/WebDevelopmentUCB/WebDevelopmentUCB.main/static/uploads/${category.imagenPath}" title="Bombas Centrifugas" alt="${category.nombre}" >
+                    <img src="http://localhost:63342/WebDevelopmentUCB/WebDevelopmentUCB.main/static/uploads/${category.imagenPath}" title="${category.nombre}" alt="${category.nombre}">
                 </div>
             </div>    
         `;

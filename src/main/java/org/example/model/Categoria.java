@@ -1,9 +1,8 @@
 package org.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Categoria {
@@ -32,4 +31,7 @@ public class Categoria {
     public void setImagenPath(String imagenPath) {
         this.imagenPath = imagenPath;
     }
+
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Producto> productos = new ArrayList<>();
 }

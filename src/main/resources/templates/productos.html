@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PRODUCTOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="../static/css/productos.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+</head>
+<body>
+<div id="header" class="sticky-top"></div>
+<h1 id="categoriaNombre" class="mb-4"></h1>
+<button id="addProductoBtn" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#productoModal">
+    <i class="fas fa-plus"></i> Agregar Producto
+</button>
+<div class="Content" id="productosContainer">
+</div>
+
+<div class="modal fade" id="productoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Agregar Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="productoForm" enctype="multipart/form-data">
+                    <input type="hidden" id="productoId" name="productoId">
+                    <div class="mb-3">
+                        <label for="productoName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="productoName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productoDescripcion" class="form-label">Descripcion</label>
+                        <input type="text" class="form-control" id="productoDescripcion" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productoPrice" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="productoPrice" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productoImage" class="form-label">Imagen</label>
+                        <input type="file" class="form-control" id="productoImage" accept="image/*" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="saveProductoBtn">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script>
+    fetch('header.html').then(response => response.text()
+        .then(data=>{ document.getElementById('header').innerHTML = data}))
+    fetch('footer.html').then(response => response.text().then(data=>{ document.getElementById('footer').innerHTML = data}))
+</script>
+<script src="../static/js/productos.js"></script>
+</html>

@@ -48,7 +48,6 @@ async function loadProductos(categoriaId) {
     }
 }
 
-// 3. POST: Crear nuevo producto
 async function createProducto(productoData) {
     try {
         const formData = new FormData();

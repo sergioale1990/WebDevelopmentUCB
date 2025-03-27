@@ -24,7 +24,11 @@ public class Producto {
     public String getImagenPath() {return imagenPath;}
     public void setImagenPath(String imagenPath) {this.imagenPath = imagenPath;}
 
-    @ManyToOne
-    @JoinColumn(name = "categoria_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "categoria_id", nullable = false) // ← nullable=false asegura que siempre tenga categoría
     private Categoria categoria;
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 }

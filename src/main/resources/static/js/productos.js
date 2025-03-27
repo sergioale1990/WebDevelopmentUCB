@@ -143,14 +143,14 @@ function renderProductos(productos) {
 
     productos.forEach(producto => {
         const card = `
-            <div class="col-md-4 mb-4">
                 <div class="card producto-card">
-                    <img src="http://localhost:63342/WebDevelopmentUCB/WebDevelopmentUCB.main/static/uploads/${producto.imagenPath}" class="card-img-top" alt="${producto.nombre}">
+                    <h5 class="card-title">${producto.nombre}</h5>
+                    <div class="producto-img-container">
+                        <img src="http://localhost:63342/WebDevelopmentUCB/WebDevelopmentUCB.main/static/uploads/${producto.imagenPath}" class="card-img-top" alt="${producto.nombre}">
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">${producto.nombre}</h5>
                         <p class="card-text">${producto.descripcion}</p>
-                        <p class="card-text"><strong>$${producto.precio.toFixed(2)}</strong></p>
-                        
+                        <p class="card-text"><strong>$${producto.precio}</strong></p>
                         <div class="btn-group">
                             <button class="btn btn-sm btn-warning edit-producto-btn" data-id="${producto.id}">
                                 <i class="fas fa-edit"></i> Editar
@@ -164,7 +164,6 @@ function renderProductos(productos) {
                         </div>
                     </div>
                 </div>
-            </div>
         `;
         container.innerHTML += card;
     });

@@ -30,6 +30,13 @@ public class CategoriaController {
         return categoriaRepository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Categoria> getCategoriaById(@PathVariable Long id) {
+        return categoriaRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
     @PostMapping
     public ResponseEntity<Categoria> createCategoria(
             @RequestParam String nombre,

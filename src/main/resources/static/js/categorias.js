@@ -36,6 +36,9 @@ function renderCategories(categories) {
                     <i class="fas fa-trash"></i> Eliminar
                 </button>
                 </div>
+                <a href="productos.html?categoriaId=${category.id}" class="btn btn-info mt-2">
+                <i class="fas fa-box-open"></i> Ver Productos
+            </a>
             </div>    
         `;
         container.innerHTML += card;

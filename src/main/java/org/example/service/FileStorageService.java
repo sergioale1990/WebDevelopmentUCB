@@ -20,4 +20,8 @@ public class FileStorageService {
 
         return fileName;
     }
+    public void deleteFile(String filename) throws IOException {
+        Path file = rootLocation.resolve(filename);
+        Files.deleteIfExists(file);
+    }
 }

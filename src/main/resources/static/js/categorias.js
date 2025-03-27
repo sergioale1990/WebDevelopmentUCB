@@ -23,19 +23,19 @@ function renderCategories(categories) {
     container.innerHTML = '';
     categories.forEach(category => {
         const card = `
-            <div>
-                <div>
+            <div class="category-card">
                     <h2>${category.nombre}</h2>
-                </div>
-                <div>
+                <div class="category-img-container">
                     <img src="http://localhost:63342/WebDevelopmentUCB/WebDevelopmentUCB.main/static/uploads/${category.imagenPath}" title="${category.nombre}" alt="${category.nombre}">
                 </div>
+                <div class="category-actions">
                 <button class="btn btn-sm btn-warning edit-btn" data-id="${category.id}">
                     <i class="fas fa-edit"></i> Editar
                 </button>
                 <button class="btn btn-sm btn-danger delete-btn" data-id="${category.id}">
                     <i class="fas fa-trash"></i> Eliminar
                 </button>
+                </div>
             </div>    
         `;
         container.innerHTML += card;

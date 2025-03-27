@@ -1,17 +1,26 @@
 .Content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    padding: 20px;
     flex-direction: row;
-
 }
-.content > div {
+.Content > div {
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 20px;
     display: flex;
+    border: 2px solid #000;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 div > img {
     width: 100%;
@@ -21,16 +30,28 @@ div > h2 {
     text-align: center;
 }
 
-.Content > div {
-    border:2px solid #000;
+.category-img-container {
     padding: 10px;
     margin: 10px;
-    border-radius: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #ddd;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+.category-actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+.category-actions .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
 .Content img {
     border-top: 2px solid #000;
 }
